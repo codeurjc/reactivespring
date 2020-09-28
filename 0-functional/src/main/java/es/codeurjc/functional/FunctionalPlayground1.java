@@ -5,7 +5,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.stream.Stream;
 
-public class FunctionalPlayground {
+public class FunctionalPlayground1 {
 
     public static void main(String[] args) {
 

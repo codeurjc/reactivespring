@@ -3,23 +3,22 @@ package es.codeurjc.functional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
 import java.util.stream.Stream;
 
-public class FunctionalPlayground4 {
+public class FunctionalPlayground5 {
 
     public static void main(String[] args) {
 
-        Stream<String> nums = Stream.of("one","two","three");
-        nums.forEach(value -> System.out.println(value));
+        Mono<String> name = Mono.just("Pepe");
+        System.out.println(name.block());
 
-        Flux<String> nums2 = Flux.just("one","two","three");
-        nums2.subscribe(value -> System.out.println(value));
+        Flux<String> numbers = Flux.just("one","two","three");
+        Mono<List<String>> numList = numbers.collectList();
+        System.out.println(numList.block());
 
         Flux<Integer> nums3 = Flux.just(4,5,6,7,8);
-        nums3.subscribe(System.out::println);
-
-        Mono<String> name = Mono.just("Pepe");
-        name.subscribe(System.out::println);
+        System.out.println(nums3.collectList().block());
 
     }
 

@@ -2,22 +2,24 @@ package es.codeurjc.functional;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.util.function.Tuples;
 
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class FunctionalPlayground2 {
+public class FunctionalPlayground3 {
 
     public static void main(String[] args) {
 
-        Optional<String> name = Optional.of("Pepe");
-        Mono<String> mono = Mono.justOrEmpty(name);
+        Flux numbers = Flux.generate(
+            () -> 0,
+            (state, sink) -> {
+                sink.next(state);
+                return state + 1;
+            }
+        );
 
-        Stream<String> emptyStream = Stream.empty();
-        Flux<String> emptyFlux = Flux.empty();
-        Mono<String> emptyMono = Mono.empty();
-
+        numbers.take(10).subscribe(System.out::println);
     }
 
 
