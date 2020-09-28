@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="books-imperative" />
+        <module name="users-imperative" />
+        <module name="books-reactive" />
+        <module name="users-reactive" />
+        <module name="rest_ejem8" />
+        <module name="books-functional" />
+        <module name="users-dto" />
+        <module name="users-functional" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="books-functional" target="11" />
+      <module name="books-imperative" target="11" />
+      <module name="books-imperative (1)" target="11" />
+      <module name="books-reactive" target="11" />
+      <module name="rest_ejem8" target="1.8" />
+      <module name="users-dto" target="11" />
+      <module name="users-functional" target="11" />
+      <module name="users-imperative" target="11" />
+      <module name="users-imperative (1)" target="11" />
+      <module name="users-reactive" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="books-functional" options="-parameters" />
+      <module name="books-imperative" options="-parameters" />
+      <module name="books-imperative (1)" options="-parameters" />
+      <module name="books-reactive" options="-parameters" />
+      <module name="rest_ejem8" options="-parameters" />
+      <module name="users-dto" options="-parameters" />
+      <module name="users-functional" options="-parameters" />
+      <module name="users-imperative" options="-parameters" />
+      <module name="users-imperative (1)" options="-parameters" />
+      <module name="users-reactive" options="-parameters" />
+    </option>
+  </component>
+</project>

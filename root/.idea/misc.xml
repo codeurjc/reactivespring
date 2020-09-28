@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../1-books-imperative/pom.xml" />
+        <option value="$PROJECT_DIR$/../2-books-functional/pom.xml" />
+        <option value="$PROJECT_DIR$/../3-books-reactive/pom.xml" />
+        <option value="$PROJECT_DIR$/../4-users-imperative/pom.xml" />
+        <option value="$PROJECT_DIR$/../5-users-dto/pom.xml" />
+        <option value="$PROJECT_DIR$/../6-users-functional/pom.xml" />
+        <option value="$PROJECT_DIR$/../7-users-reactive/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../2-books-functional/books-functional.iml" filepath="$PROJECT_DIR$/../2-books-functional/books-functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../1-books-imperative/books-imperative.iml" filepath="$PROJECT_DIR$/../1-books-imperative/books-imperative.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../3-books-reactive/books-reactive.iml" filepath="$PROJECT_DIR$/../3-books-reactive/books-reactive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../5-books-imperative/rest_ejem8.iml" filepath="$PROJECT_DIR$/../5-books-imperative/rest_ejem8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../5-users-dto/users-dto.iml" filepath="$PROJECT_DIR$/../5-users-dto/users-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../6-users-functional/users-functional.iml" filepath="$PROJECT_DIR$/../6-users-functional/users-functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../4-users-imperative/users-imperative.iml" filepath="$PROJECT_DIR$/../4-users-imperative/users-imperative.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../7-users-reactive/users-reactive.iml" filepath="$PROJECT_DIR$/../7-users-reactive/users-reactive.iml" />
+    </modules>
+  </component>
+</project>
