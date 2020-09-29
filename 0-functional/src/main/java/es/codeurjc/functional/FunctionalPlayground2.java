@@ -14,11 +14,8 @@ public class FunctionalPlayground2 {
         Optional<String> name = Optional.of("Pepe");
         Mono<String> mono = Mono.justOrEmpty(name);
 
-        Stream<String> emptyStream = Stream.empty();
-        Flux<String> emptyFlux = Flux.empty();
-        Mono<String> emptyMono = Mono.empty();
+        Stream<Integer> stream = Stream.of(4,3,5);
+        Flux<Integer> emptyFlux = Flux.fromStream(stream);
 
     }
-
-
 }

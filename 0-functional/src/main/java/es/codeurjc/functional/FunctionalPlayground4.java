@@ -15,10 +15,10 @@ public class FunctionalPlayground4 {
         Flux<String> nums2 = Flux.just("one","two","three");
         nums2.subscribe(value -> System.out.println(value));
 
-        Flux<Integer> nums3 = Flux.just(4,5,6,7,8);
+        Flux<Integer> nums3 = Flux.range(4,5);
         nums3.subscribe(System.out::println);
 
-        Mono<String> name = Mono.just("Pepe");
+        Mono<String> name = Mono.empty();
         name.subscribe(System.out::println);
 
     }
