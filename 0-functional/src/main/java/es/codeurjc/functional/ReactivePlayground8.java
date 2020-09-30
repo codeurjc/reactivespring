@@ -1,20 +1,34 @@
 package es.codeurjc.functional;
 
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.time.Duration;
 
 public class ReactivePlayground8 {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Flux<String> letters= Flux.just("a", "b", "c")
-            .doOnNext(l -> System.out.print(" l"+l));
+        Flux<Integer> valuesWithError = Flux.just(1, 2, 3)
+            .flatMap(v -> sumService(v));
 
-        Flux<Integer> numbers = Flux.just(1, 2, 3)
-            .doOnNext(n -> System.out.print(" n"+n));
+        Flux<Integer> values = valuesWithError
+            .onErrorResume(IllegalArgumentException.class, e -> Flux.just(4, 5, 6));
 
-        Flux<Integer> finalNumbers = letters.thenMany(numbers);
+        values.subscribe(System.out::println);
 
-        finalNumbers.subscribe(f -> System.out.print(" f"+f));
+        // 1, 2, 4, 5, 6
 
+        Thread.sleep(10000);
     }
+
+    private static Mono<Integer> sumService(Integer v) {
+
+        if (v != 3) {
+            return Mono.just(v+1);
+        } else {
+            return Mono.error(new IllegalArgumentException());
+        }
+    }
+
 }

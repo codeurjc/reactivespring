@@ -1,6 +1,7 @@
 package es.codeurjc.functional;
 
 import reactor.core.publisher.Flux;
+import reactor.util.function.Tuples;
 
 import java.time.Duration;
 
@@ -8,12 +9,16 @@ public class ReactivePlayground7 {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Flux<String> letters= Flux.just("a", "b", "c");
-        Flux<Integer> numbers = Flux.just(1, 2, 3);
+        Flux<String> data = Flux
+            .just("re", "rea", "reac", "reactive")
+            .delayElements(Duration.ofMillis(100))
+            .switchMap(v ->
+                Flux.just("Result "+v)
+                    .delayElements(Duration.ofMillis(500))
+            );
 
-        Flux<Integer> finalNumbers = letters.thenMany(numbers);
+        data.subscribe(System.out::println);
 
-        finalNumbers.subscribe(System.out::println);
-
+        Thread.sleep(1000000);
     }
 }

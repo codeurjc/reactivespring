@@ -1,26 +1,21 @@
 package es.codeurjc.functional;
 
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+import reactor.util.function.Tuples;
 
 import java.time.Duration;
-import java.time.temporal.TemporalUnit;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class ReactivePlayground6 {
 
     public static void main(String[] args) throws InterruptedException {
 
-       Flux<Long> nums = Flux.interval(Duration.ofMillis(500));
+        Flux<Integer> data = Flux
+            .just(Tuples.of(1, 300), Tuples.of(2, 200), Tuples.of(3, 100))
+            .concatMap(v -> Flux.just(v.getT1())
+                .delayElements(Duration.ofMillis(v.getT2())));
 
-       nums
-           .elapsed()
-           .subscribe(System.out::println);
+        data.subscribe(System.out::println);
 
-       Thread.sleep(10000000);
-
+        Thread.sleep(1000000);
     }
-
-
 }
