@@ -3,12 +3,8 @@ package es.codeurjc.users;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import javax.annotation.PostConstruct;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Stream;
 
 @Component
 @DependsOn({"initializer"})

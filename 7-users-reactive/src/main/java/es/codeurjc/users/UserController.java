@@ -1,13 +1,9 @@
 package es.codeurjc.users;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
-
-import static java.util.stream.Collectors.*;
 
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;

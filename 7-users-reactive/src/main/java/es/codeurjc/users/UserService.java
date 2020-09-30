@@ -6,9 +6,7 @@ import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 @Service
 public class UserService {
